@@ -8,7 +8,7 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 120vh;
   background-color: rgb(245, 244, 244);
 }
 
@@ -36,10 +36,9 @@ body {
   margin: 1rem;
   font-family: 'Roboto', arial;
 }
-
 .content-container {
   flex: 1;
-  background-color: white;
+  background-color: green;
   display: flex;
   flex-direction: column;
   max-width: 1320px;
@@ -47,16 +46,72 @@ body {
   margin: 0 auto;
 }
 
-.calc-container {
+.desc-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: red;
+  padding: 20px; /* Add padding for spacing */
+  padding-bottom: 400px;
+  flex-direction: row;
+}
+
+.desc-text {
+  flex: 1; /* Allow text to grow and take available space */
+  margin-right: 20px; /* Add spacing between text and image */
+  font-size: 1.5rem;
+  background-color: orange;
+}
+
+.desc-image img {
+  flex: 1;
+  max-width: 40%; /* Ensure the image is responsive and doesn't exceed its container */
+  height: auto;
+  border: 1px solid #000;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25);
+}
+
+.icon-container {
+  display: flex;
+  padding: 100px;
+  padding-bottom: 150px;
+  background-color: blue;
+  justify-content: center;
+}
+
+.icon-layout {
   flex-wrap: wrap;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  gap: 50px;
+}
+
+.icon {
+  flex: 0 0 auto;
+  width: 20%;
+  padding: 100px;
+  border: 1px solid #000;
+  background-color: red;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25);
+}
+
+.box-container {
+
+}
+
+.box-layout {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 30px;
+  padding-bottom: 25px;
 }
 
 .box {
   flex: 0 0 auto;
-  width: 25%;
-  padding: 100px;
+  width: 20%;
+  padding: 120px;
   border: 1px solid #000;
   background-color: red;
   border-radius: 10px;
