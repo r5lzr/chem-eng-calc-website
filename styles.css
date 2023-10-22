@@ -36,6 +36,7 @@ body {
   margin: 1rem;
   font-family: 'Roboto', arial;
 }
+
 .content-container {
   flex: 1;
   background-color: green;
@@ -48,28 +49,44 @@ body {
 
 .desc-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Allow text and image to wrap when necessary */
+  align-items: center;
   background-color: red;
-  padding: 20px; /* Add padding for spacing */
-  padding-bottom: 400px;
-  flex-direction: row;
+  padding: 20px;
 }
 
 .desc-text {
-  flex: 1; /* Allow text to grow and take available space */
-  margin-right: 20px; /* Add spacing between text and image */
+  flex: 0; /* Allow text to take available space */
   font-size: 1.5rem;
   background-color: orange;
+  margin-right: 20px; /* Add spacing between text and image */
+}
+
+.desc-image {
+  flex: 1; /* Allow the image to take available space */
+  max-width: 100;
+  margin-top: 20px; /* Add spacing between text and image */
 }
 
 .desc-image img {
-  flex: 1;
-  max-width: 40%; /* Ensure the image is responsive and doesn't exceed its container */
+  max-width: 100%; /* Ensure the image is responsive and adjusts to the container */
   height: auto;
   border: 1px solid #000;
   border-radius: 10px;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25);
 }
+
+/* Media query for smaller screens */
+@media screen and (max-width: 900px) {
+  .desc-container {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+  }
+
+  .desc-text {
+    margin-right: 0; /* Remove spacing between text and image on smaller screens */
+  }
+}
+
 
 .icon-container {
   display: flex;
